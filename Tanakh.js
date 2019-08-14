@@ -30,22 +30,25 @@ bot.on("message",msg => {
                 msg.channel.send("Let me comfort you", {files: ["bagel1.jpg"]});
             }
             else if(randomOyVey == 2){
-                msg.channel.send("Let me comfort you", {files: ["bagel1.jpg"]});
+                msg.channel.send("Let me comfort you", {files: ["bagel2.jpg"]});
             }
             else if(randomOyVey == 3){
-                msg.channel.send("Let me comfort you", {files: ["bagel1.jpg"]});
+                msg.channel.send("Let me comfort you", {files: ["bagel3.jpg"]});
             }
             else if(randomOyVey == 4){
-                msg.channel.send("Let me comfort you", {files: ["bagel1.jpg"]});
+                msg.channel.send("Let me comfort you", {files: ["matzo1.jpg"]});
             }
             else if(randomOyVey == 5){
-                msg.channel.send("Let me comfort you", {files: ["bagel1.jpg"]});
+                msg.channel.send("Let me comfort you", {files: ["matzo2.jpg"]});
             }
             else{
                 logger.info("no image found random out of bounds");
             }
         }
-        
+       else if(msg.content.includes("Genesis")){
+            //find a way to parce which chapter and verse and find it in the format of 1:1 to find first chapter 
+            //then first verse and print it
+       } 
         
     }
 });
