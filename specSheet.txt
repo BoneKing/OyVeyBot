@@ -1,3 +1,3 @@
 contains content from https://www.sefaria.org/texts/Tanakh
 print verses in format [Genesis 1:1-5]
-
+when someone types "oy vey" send photo of food (bagels or matza balls)
