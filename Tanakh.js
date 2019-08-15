@@ -18,6 +18,8 @@ bot.on("ready",() => {
   logger.info("Connected");
 });
 
+var images = ["bagel1.jpg", "bagel2.jpg", "bagels3.jpg", "matzo1.jpg", "matzo2.jpg", "bagels4.jpg","bagels5.jpg", "matzo3.jpg", "matzo4.jpg", "matzo5.jpg"];
+var leng = images.length;
 bot.on("message",msg => {	
 	if(msg.author == bot.user){
 		//react to all message here
@@ -25,27 +27,12 @@ bot.on("message",msg => {
 	
 	else{
 		if(msg.content.includes("Oy vey") || msg.content.includes("oy vey")){
-            var randomOyVey = randint(5);
+            var randomOyVey = randint(leng);
             if(randomOyVey == 1){
-                msg.channel.send("Let me comfort you", {files: ["bagel1.jpg"]});
-            }
-            else if(randomOyVey == 2){
-                msg.channel.send("Let me comfort you", {files: ["bagel2.jpg"]});
-            }
-            else if(randomOyVey == 3){
-                msg.channel.send("Let me comfort you", {files: ["bagel3.jpg"]});
-            }
-            else if(randomOyVey == 4){
-                msg.channel.send("Let me comfort you", {files: ["matzo1.jpg"]});
-            }
-            else if(randomOyVey == 5){
-                msg.channel.send("Let me comfort you", {files: ["matzo2.jpg"]});
-            }
-            else{
-                logger.info("no image found random out of bounds");
+                msg.channel.send("Let me comfort you", {files: [images[randomOyVey]]});
             }
         }
-       else if(msg.content.includes("Genesis")){
+       else{
             //find a way to parce which chapter and verse and find it in the format of 1:1 to find first chapter 
             //then first verse and print it
        } 
