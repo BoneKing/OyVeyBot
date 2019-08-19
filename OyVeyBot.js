@@ -26,7 +26,7 @@ bot.on("message",msg => {
 	}
 	
 	else{
-		if(msg.content.includes("Oy vey") || msg.content.includes("oy vey")){
+		if(msg.content.includes("Oy vey") || msg.content.includes("oy vey") || msg.content.includes(" oy vey ") || msg.content.includes(" oy vey")){
       var randomOyVey = randint(leng);
       msg.channel.send("Let me comfort you", {files: [images[randomOyVey]]});
           
